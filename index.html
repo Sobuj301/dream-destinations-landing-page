@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sound Stories Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+
+<body id="body" class="bg-white text-black transition duration-300">
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <nav id="navbar" class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur border-b z-50 transition">
+
+            <div class="max-w-6xl mx-auto flex items-center justify-between h-[80px] px-4">
+
+                <!-- LEFT: LOGO -->
+                <h1 class="font-bold text-xl flex items-center gap-2">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    Wanderly
+                </h1>
+
+                <!-- CENTER: DESKTOP MENU -->
+                <ul class="hidden md:flex gap-8 absolute left-1/2 -translate-x-1/2">
+                    <li class="nav-link text-gray-600 hover:text-black cursor-pointer">Home</li>
+                    <li class="nav-link text-gray-600 hover:text-black cursor-pointer">Destinations</li>
+                    <li class="nav-link text-gray-600 hover:text-black cursor-pointer">Tours</li>
+                    <li class="nav-link text-gray-600 hover:text-black cursor-pointer">About</li>
+                    <li class="nav-link text-gray-600 hover:text-black cursor-pointer">Contact</li>
+                </ul>
+
+                <!-- RIGHT: ACTIONS -->
+                <div class="flex items-center gap-3">
+
+                    <!-- DARK MODE -->
+                    <button id="themeToggle" class="text-xl">
+                        <i id="themeIcon" class="fa-solid fa-moon"></i>
+                    </button>
+
+                    <!-- BOOK NOW BUTTON -->
+                    <button
+                        class="hidden md:block w-full rounded-lg bg-[#0D9488] px-5 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-primary-700">
+                        Book Now
+                    </button>
+
+                    <!-- MOBILE MENU -->
+                    <button id="menuBtn" class="md:hidden text-2xl">
+                        <i id="menuIcon" class="fa-solid fa-bars"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- MOBILE MENU -->
+            <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 border-t bg-white">
+
+                <a class="block py-2 mobile-link">Home</a>
+                <a class="block py-2 mobile-link">Destinations</a>
+                <a class="block py-2 mobile-link">Tours</a>
+                <a class="block py-2 mobile-link">About</a>
+                <a class="block py-2 mobile-link">Contact</a>
+
+                <!-- MOBILE CTA -->
+                <button
+                    class="block w-full rounded-lg bg-[#0D9488] px-5 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-primary-700">
+                    Book Now
+                </button>
+
+            </div>
+
+        </nav>
+        <section class="relative w-full px-6 md:px-20 py-10 md:py-20 mt-[80px]">
+
+            <!-- BACKGROUND IMAGE -->
+            <img src="./assets/image/hero.jpeg" class="absolute inset-0 w-full h-full object-cover object-top" />
+
+            <!-- OVERLAY -->
+            <div class="absolute inset-0 bg-black/50"></div>
+
+            <!-- CONTENT -->
+            <div class="relative z-10 text-white w-full md:w-3/5 flex flex-col justify-start space-y-6 md:space-y-8">
+
+                <span class="border px-3 py-1 w-fit rounded-md bg-[#0D9488] border-[#0D9488] bg-opacity-50 text-sm">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                    Top-Rated Travel Agency 2026
+                </span>
+
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
+                    Discover Your Next <br>
+                    <span class="bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                        Adventure
+                    </span>
+                </h1>
+
+                <p class="text-sm md:text-base text-slate-200">
+                    Explore breathtaking destinations around the world with our expertly curated tours.
+                    From ancient wonders to tropical paradises, your dream vacation awaits.
+                </p>
+
+                <!-- BUTTONS -->
+                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-4/5">
+
+                    <button class="w-full rounded-lg bg-[#0D9488] px-5 py-3 text-sm font-medium text-white
+                       hover:bg-[#0b7f74] transition">
+
+                        Explore Tours <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </button>
+
+                    <button class="w-full rounded-lg bg-[#2F3843] border border-white px-5 py-3 text-sm font-medium text-white
+                       hover:bg-[#3a4653] transition">
+
+                        <i class="fa-solid fa-circle-play mr-2"></i>
+                        Watch Our Story
+                    </button>
+
+                </div>
+
+                <hr class="border-white/30">
+
+            </div>
+
+            <!-- STATS -->
+            <div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-6 py-10 text-white w-full md:w-3/5">
+
+                <div>
+                    <h2 class="text-xl md:text-2xl font-bold">50+</h2>
+                    <p class="text-sm text-slate-300">Destinations</p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl md:text-2xl font-bold">120+</h2>
+                    <p class="text-sm text-slate-300">Tours</p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl md:text-2xl font-bold">10k+</h2>
+                    <p class="text-sm text-slate-300">Travelers</p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl md:text-2xl font-bold">4.9</h2>
+                    <p class="text-sm text-slate-300">Rating</p>
+                </div>
+
+            </div>
+
+            <!-- FORM -->
+            <form class="relative bg-slate-50 p-5 md:p-10 rounded-xl
+                 flex flex-col md:flex-row gap-4 items-stretch md:items-end">
+
+                <!-- DESTINATION -->
+                <div class="flex flex-col gap-2 w-full">
+
+                    <label class="text-sm font-medium text-slate-600">Destination</label>
+
+                    <input type="text" placeholder="e.g. Cox's Bazar" class="w-full px-4 py-3 rounded-lg border border-slate-200 bg-white
+                          focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                </div>
+
+                <!-- CHECK IN -->
+                <div class="flex flex-col gap-2 w-full">
+
+                    <label class="text-sm font-medium text-slate-600">Check In</label>
+
+                    <input type="date" class="w-full px-4 py-3 rounded-lg border border-slate-200 bg-white
+                          focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                </div>
+
+                <!-- CHECK OUT -->
+                <div class="flex flex-col gap-2 w-full">
+
+                    <label class="text-sm font-medium text-slate-600">Check Out</label>
+
+                    <input type="date" class="w-full px-4 py-3 rounded-lg border border-slate-200 bg-white
+                          focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                </div>
+
+                <!-- TRAVELERS -->
+                <div class="flex flex-col gap-2 w-full">
+
+                    <label class="text-sm font-medium text-slate-600">Travelers</label>
+
+                    <select class="w-full px-4 py-3 rounded-lg border border-slate-200 bg-white
+                       focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+
+                        <option>1 Person</option>
+                        <option>2 Persons</option>
+                        <option>3 Persons</option>
+                        <option>4+ Persons</option>
+
+                    </select>
+
+                </div>
+
+                <!-- BUTTON -->
+                <div class="w-full md:w-auto">
+
+                    <button type="submit" class="w-full md:w-auto px-6 py-3 bg-[#0D9488] text-white rounded-lg
+                           hover:bg-[#0b7f74] transition font-medium whitespace-nowrap">
+
+                        Search Tours
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+    </header>
+
+    <script src="script/mobile.js"></script>
+    <script src="script/theme.js"></script>
+
+</body>
+
+</html>
