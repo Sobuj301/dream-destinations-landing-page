@@ -78,7 +78,7 @@
             <img src="./assets/image/hero.jpeg" class="absolute inset-0 w-full h-full object-cover object-top" />
 
             <!-- OVERLAY -->
-            <div class="absolute inset-0 bg-black/70"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/10 to-white/80"></div>
 
             <!-- CONTENT -->
             <div class="max-w-7xl mx-auto">
@@ -748,7 +748,154 @@
 
             </div>
         </section>
+        <section class="relative w-full px-6 py-16 md:py-24 flex flex-col justify-center items-center">
+
+            <!-- BACKGROUND IMAGE -->
+            <img src="./assets/image/bord.jpeg" class="absolute inset-0 w-full h-full object-cover object-top" />
+
+            <!-- OVERLAY -->
+            <div class="absolute inset-0 bg-[#285C58]/90"></div>
+
+            <!-- CONTENT -->
+            <div class="relative z-10 max-w-7xl mx-auto text-center text-white">
+
+                <!-- Heading -->
+                <h2 class="text-3xl md:text-5xl font-bold leading-tight mb-6">
+                    Ready for Your Next Adventure?
+                </h2>
+
+                <!-- Description -->
+                <p class="text-gray-200 text-base md:text-lg max-w-2xl mx-auto mb-8">
+                    Join thousands of travelers who have discovered the world with Wanderlust.
+                    Your journey of a lifetime starts here.
+                </p>
+
+                <!-- Buttons -->
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                    <button
+                        class="bg-white text-[#185552] px-6 py-3 rounded-md font-semibold hover:bg-gray-200 transition">
+                        Start Planning
+                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </button>
+
+                    <button
+                        class="border border-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-[#185552] transition">
+                        Contact Us
+                    </button>
+                </div>
+
+                <!-- Subscription -->
+                <h3 class="text-lg md:text-base font-medium text-[#75a8a6] mb-4">
+                    Subscribe to get exclusive travel deals & inspiration
+                </h3>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-xl mx-auto">
+
+                    <input type="email" placeholder="Enter your email"
+                        class="w-full px-4 py-3 rounded-md text-white bg-[#306965] border focus:outline-none focus:ring-2" />
+
+                    <button
+                        class="bg-[#CA8A04] w-full md:w-1/3 px-6 py-3 rounded-md font-semibold hover:bg-[#936c17] transition">
+                        Subscribe
+                    </button>
+                </div>
+
+            </div>
+        </section>
     </main>
+
+    <footer class="w-full bg-[#111827] text-white px-6 py-12">
+    <div class="max-w-7xl mx-auto">
+        <!-- GRID -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-10">
+
+            <!-- BRAND -->
+            <div class="sm:col-span-2 lg:col-span-2">
+                <h1 class="font-bold text-2xl flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-plane-departure text-[#14A496]"></i>
+                    Wanderly
+                </h1>
+
+                <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                    Discover extraordinary destinations and create unforgettable memories with our curated travel experiences.
+                </p>
+
+                <div class="flex gap-4 text-lg">
+                    <i class="fa-brands fa-instagram hover:text-[#CA8A04] cursor-pointer"></i>
+                    <i class="fa-brands fa-facebook hover:text-[#CA8A04] cursor-pointer"></i>
+                    <i class="fa-solid fa-x hover:text-[#CA8A04] cursor-pointer"></i>
+                    <i class="fa-brands fa-youtube hover:text-[#CA8A04] cursor-pointer"></i>
+                </div>
+            </div>
+
+            <!-- DESTINATIONS -->
+            <div>
+                <h2 class="font-semibold mb-4">Destinations</h2>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#" class="hover:text-white">Maldives</a></li>
+                    <li><a href="#" class="hover:text-white">Bali</a></li>
+                    <li><a href="#" class="hover:text-white">Paris</a></li>
+                    <li><a href="#" class="hover:text-white">Switzerland</a></li>
+                </ul>
+            </div>
+
+            <!-- COMPANY -->
+            <div>
+                <h2 class="font-semibold mb-4">Company</h2>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#" class="hover:text-white">About Us</a></li>
+                    <li><a href="#" class="hover:text-white">Our Team</a></li>
+                    <li><a href="#" class="hover:text-white">Careers</a></li>
+                    <li><a href="#" class="hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- SUPPORT -->
+            <div>
+                <h2 class="font-semibold mb-4">Support</h2>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#" class="hover:text-white">Help Center</a></li>
+                    <li><a href="#" class="hover:text-white">Travel Insurance</a></li>
+                    <li><a href="#" class="hover:text-white">Cancellation Policy</a></li>
+                    <li><a href="#" class="hover:text-white">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div class="sm:col-span-2 md:col-span-3 lg:col-span-2">
+                <h2 class="font-semibold mb-4">Travel Inspiration</h2>
+                <p class="text-gray-400 text-sm mb-4">
+                    Subscribe for exclusive deals, travel tips, and destination guides.
+                </p>
+
+                <form class="flex flex-col sm:flex-row gap-2">
+                    <input type="email" placeholder="Enter your email"
+                        class="w-full md:w-4/5 px-4 py-2 rounded-md text-white bg-[#111827] border border-[#14A496] focus:outline-none" />
+
+                    <button
+                        class="bg-[#14A496] px-3 py-2 md:w-3/5 lg:w-3/5 rounded-md font-semibold hover:bg-[#05e1cb] transition">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- DIVIDER -->
+        <hr class="my-8 border-gray-700">
+
+        <!-- BOTTOM -->
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400 text-center md:text-left">
+            <p>© 2026 Wanderly. All rights reserved.</p>
+
+            <ul class="flex flex-wrap justify-center md:justify-end gap-6">
+                <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-white">Terms & Services</a></li>
+            </ul>
+        </div>
+
+    </div>
+</footer>
 
     <script src="script/mobile.js"></script>
     <script src="script/theme.js"></script>
