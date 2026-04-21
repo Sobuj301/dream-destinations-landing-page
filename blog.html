@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+</head>
+
+<body class="transition duration-300 bg-white text-black dark:bg-gray-900 dark:text-white">
+    <header>
+        <nav id="navbar relative"
+            class="fixed top-0 left-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur z-50 transition px-4 shadow-lg">
+
+            <div class="flex items-center justify-between h-[80px] max-w-7xl mx-auto">
+
+                <!-- LEFT: LOGO -->
+                <a href="index.html" class="font-bold text-2xl flex items-center gap-2">
+                    <i class="fa-solid fa-plane-departure text-[#0D9488]"></i>
+                    Wanderly
+                </a>
+
+                <!-- CENTER: DESKTOP MENU -->
+                <ul class="hidden md:flex gap-8 mx-auto">
+
+                    <li>
+                        <a class="nav-link" href="index.html#destinations">Destinations</a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="index.html#tours">Tours</a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+
+                    <li class="relative group">
+                        <a class="nav-link text-[#0D9488] font-semibold" href="#">Resources</a>
+                        <ul
+                            class="absolute left-0 w-52 bg-white dark:bg-gray-800 shadow-lg px-5 py-2 rounded hidden group-hover:block">
+                            <li><a href="#" class="block px-4 py-2">Travel Blog</a></li>
+                            <li><a href="#" class="block px-4 py-2">Travel Guides</a></li>
+                            <li><a href="#" class="block px-4 py-2">FAQ</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+                <!-- RIGHT: ACTIONS -->
+                <div class="flex items-center gap-3">
+
+                    <!-- DARK MODE -->
+                    <button id="themeToggle" class="text-xl">
+                        <i id="themeIcon" class="fa-solid fa-moon"></i>
+                    </button>
+
+                    <!-- BOOK NOW -->
+                    <button
+                        class="hidden md:block bg-[#0D9488] px-5 py-3 text-sm font-medium text-white rounded-lg hover:bg-teal-700 transition">
+                        Book Now
+                    </button>
+
+                    <!-- MOBILE MENU BUTTON -->
+                    <button id="menuBtn" class="md:hidden text-2xl">
+                        <i id="menuIcon" class="fa-solid fa-bars"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- MOBILE MENU -->
+            <div id="mobileMenu" class="hidden md:hidden absolute w-full right-0 px-4 pb-4 bg-white dark:bg-gray-900">
+
+                <!-- LINKS -->
+                <a href="index.html#destinations" class="block py-2 mobile-link">Destinations</a>
+                <a href="index.html#tours" class="block py-2 mobile-link">Tours</a>
+                <a href="index.html#about" class="block py-2 mobile-link">About</a>
+                <!-- RESOURCES DROPDOWN -->
+                <div class="md:hidden">
+
+                    <button id="resourcesBtn" class="flex items-center gap-2 py-2">
+                        Resources <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <div id="resourcesDropdown" class="hidden pl-4">
+                        <a href="#" class="block py-2">Travel Blog</a>
+                        <a href="#" class="block py-2">Travel Guides</a>
+                        <a href="#" class="block py-2">FAQ</a>
+                    </div>
+
+                </div>
+                <a href="#contact" class="block py-2 mobile-link">Contact</a>
+
+                <!-- BOOK BUTTON -->
+                <button id="bookBtn" class="block w-full mt-2 bg-[#0D9488] px-5 py-3 text-white rounded-lg">
+                    Book Now
+                </button>
+
+            </div>
+
+        </nav>
+
+        <section class="w-full bg-[#10786F] py-24 md:py-28 mt-[80px] flex items-center justify-center px-4">
+
+            <div class="max-w-3xl mx-auto text-center px-4">
+
+                <h2 class="text-3xl md:text-5xl font-bold text-white">
+                    Travel Blog
+                </h2>
+
+                <p class="text-white/80 mt-3 text-sm md:text-base">
+                    Stories, tips, and inspiration for your next adventure
+                </p>
+
+            </div>
+
+        </section>
+    </header>
+
+    <main>
+        <section class="w-full py-16 px-4">
+
+            <div class="flex flex-wrap pb-8 md:py-10 justify-center gap-3 max-w-3xl mx-auto">
+
+                <button class="bg-[#10786F] text-white px-4 py-1 rounded-full">
+                    All
+                </button>
+
+                <button
+                    class="bg-stone-300 hover:bg-stone-400 dark:bg-[#1F2937] dark:hover:bg-[#4a5c75] px-5 py-2 rounded-full transition">
+                    Destination
+                </button>
+
+                <button
+                    class="bg-stone-300 hover:bg-stone-400 dark:bg-[#1F2937] dark:hover:bg-[#4a5c75]  px-5 py-2 rounded-full transition">
+                    Travel Tips
+                </button>
+
+                <button
+                    class="bg-stone-300 hover:bg-stone-400 dark:bg-[#1F2937] dark:hover:bg-[#4a5c75] px-5 py-2 rounded-full transition">
+                    Sustainability
+                </button>
+
+                <button
+                    class="bg-stone-300 hover:bg-stone-400 dark:bg-[#1F2937] dark:hover:bg-[#4a5c75] px-5 py-2 rounded-full transition">
+                    Food & Culture
+                </button>
+
+            </div>
+
+
+            <div class="max-w-7xl mx-auto rounded-xl overflow-hidden dark:bg-[#1F2937] shadow-2xl">
+
+                <div class="max-w-7xl mx-auto rounded-xl overflow-hidden">
+
+                    <div class="flex flex-col md:flex-row gap-6 group items-center">
+
+                        <!-- IMAGE -->
+                        <div class="md:w-1/2 overflow-hidden">
+                            <img class="w-full h-64 md:h-full object-cover transition object-bottom duration-500 group-hover:scale-110"
+                                src="./assets/image/blog.jpeg" alt="blog">
+                        </div>
+
+                        <!-- CONTENT -->
+                        <div class="md:w-1/2 p-6 space-y-6">
+
+                            <!-- CATEGORY -->
+                            <a href="index.html#destinations"
+                                class="inline-block bg-[#b3f1e4] text-teal-600 px-4 py-1 rounded-full text-sm font-medium">
+                                Destinations
+                            </a>
+
+                            <!-- TITLE -->
+                            <h2 class="text-2xl md:text-4xl font-bold transition group-hover:text-[#10786F]">
+                                10 Hidden Gems in Southeast Asia You Need to Visit
+                            </h2>
+
+                            <!-- DESCRIPTION -->
+                            <p class="text-gray-600 dark:text-white text-lg">
+                                Discover off-the-beaten-path destinations that offer authentic experiences away from the
+                                tourist crowds.
+                            </p>
+
+                            <!-- META INFO -->
+                            <div class="flex gap-5 text-sm text-gray-500 dark:text-white">
+                                <span>January 15 2026</span>
+                                <span>8 min read</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto py-12 md:py-20">
+
+                <!-- CARD 1 -->
+                <div
+                    class="group bg-white dark:bg-[#1F2937] rounded-3xl shadow-md overflow-hidden hover:shadow-xl transition flex flex-col min-h-[420px]">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-60 object-cover transition duration-500 group-hover:scale-110"
+                            src="./assets/image/card1.jpeg">
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-1">
+                        <div class="space-y-4">
+                            <a
+                                class="inline-block bg-[#b3f1e4] text-teal-600 px-4 py-1 rounded-full text-sm font-medium">Travel
+                                Tips</a>
+                            <h2
+                                class="text-lg md:text-xl font-semibold text-gray-800 dark:text-white group-hover:text-[#10786F] transition">
+                                The Ultimate Packing Guide for Long-Term Travel
+                            </h2>
+                            <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                                Learn how to pack smart, travel light, and stay prepared for long journeys without
+                                unnecessary items.
+                            </p>
+                        </div>
+                        <div class="flex gap-5 text-sm text-gray-500 dark:text-gray-400 mt-6">
+                            <span>Jan 10, 2026</span><span>6 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div
+                    class="group bg-white dark:bg-[#1F2937] rounded-3xl shadow-md overflow-hidden hover:shadow-xl transition flex flex-col min-h-[420px]">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-60 object-cover transition duration-500 group-hover:scale-110"
+                            src="./assets/image/card2.jpeg">
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-1">
+                        <div class="space-y-4">
+                            <a
+                                class="inline-block bg-[#b3f1e4] text-teal-600 px-4 py-1 rounded-full text-sm font-medium">Destination</a>
+                            <h2
+                                class="text-lg md:text-xl font-semibold text-gray-800 dark:text-white group-hover:text-[#10786F] transition">
+                                Hidden Beaches of Bali
+                            </h2>
+                            <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                                Discover quiet beaches and peaceful coastal spots far away from busy tourist crowds.
+                            </p>
+                        </div>
+                        <div class="flex gap-5 text-sm text-gray-500 dark:text-gray-400 mt-6">
+                            <span>Jan 12, 2026</span><span>5 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div
+                    class="group bg-white dark:bg-[#1F2937] rounded-3xl shadow-md overflow-hidden hover:shadow-xl transition flex flex-col min-h-[420px]">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-60 object-cover transition duration-500 group-hover:scale-110"
+                            src="./assets/image/card3.jpeg">
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-1">
+                        <div class="space-y-4">
+                            <a
+                                class="inline-block bg-[#b3f1e4] text-teal-600 px-4 py-1 rounded-full text-sm font-medium">Food
+                                & Culture</a>
+                            <h2
+                                class="text-lg md:text-xl font-semibold text-gray-800 dark:text-white group-hover:text-[#10786F] transition">
+                                Street Food Guide in Bangkok
+                            </h2>
+                            <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                                Taste authentic street food and explore local culinary traditions across Bangkok.
+                            </p>
+                        </div>
+                        <div class="flex gap-5 text-sm text-gray-500 dark:text-gray-400 mt-6">
+                            <span>Jan 14, 2026</span><span>7 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div
+                    class="group bg-white dark:bg-[#1F2937] rounded-3xl shadow-md overflow-hidden hover:shadow-xl transition flex flex-col min-h-[420px]">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-60 object-cover transition duration-500 group-hover:scale-110"
+                            src="./assets/image/card4.jpeg">
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-1">
+                        <div class="space-y-4">
+                            <a
+                                class="inline-block bg-[#b3f1e4] text-teal-600 px-4 py-1 rounded-full text-sm font-medium">Sustainability</a>
+                            <h2
+                                class="text-lg md:text-xl font-semibold text-gray-800 dark:text-white group-hover:text-[#10786F] transition">
+                                Eco-Friendly Travel Tips
+                            </h2>
+                            <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                                Learn simple ways to travel responsibly and reduce your environmental impact.
+                            </p>
+                        </div>
+                        <div class="flex gap-5 text-sm text-gray-500 dark:text-gray-400 mt-6">
+                            <span>Jan 16, 2026</span><span>6 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 5 -->
+                <div
+                    class="group bg-white dark:bg-[#1F2937] rounded-3xl shadow-md overflow-hidden hover:shadow-xl transition flex flex-col min-h-[420px]">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-60 object-cover transition duration-500 group-hover:scale-110"
+                            src="./assets/image/card5.avif">
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-1">
+                        <div class="space-y-4">
+                            <a
+                                class="inline-block bg-[#b3f1e4] text-teal-600 px-4 py-1 rounded-full text-sm font-medium">Adventure</a>
+                            <h2
+                                class="text-lg md:text-xl font-semibold text-gray-800 dark:text-white group-hover:text-[#10786F] transition">
+                                Mountain Hiking Guide
+                            </h2>
+                            <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                                Explore top hiking trails and learn safety tips for your next mountain adventure.
+                            </p>
+                        </div>
+                        <div class="flex gap-5 text-sm text-gray-500 dark:text-gray-400 mt-6">
+                            <span>Jan 18, 2026</span><span>8 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 6 -->
+                <div
+                    class="group bg-white dark:bg-[#1F2937] rounded-3xl shadow-md overflow-hidden hover:shadow-xl transition flex flex-col min-h-[420px]">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-60 object-cover transition duration-500 group-hover:scale-110"
+                            src="./assets/image/card6.avif">
+                    </div>
+                    <div class="p-6 flex flex-col justify-between flex-1">
+                        <div class="space-y-4">
+                            <a
+                                class="inline-block bg-[#b3f1e4] text-teal-600 px-4 py-1 rounded-full text-sm font-medium">Culture</a>
+                            <h2
+                                class="text-lg md:text-xl font-semibold text-gray-800 dark:text-white group-hover:text-[#10786F] transition">
+                                Exploring Local Traditions
+                            </h2>
+                            <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                                Discover cultural traditions, festivals, and local experiences around the world.
+                            </p>
+                        </div>
+                        <div class="flex gap-5 text-sm text-gray-500 dark:text-gray-400 mt-6">
+                            <span>Jan 20, 2026</span><span>5 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex justify-center">
+                <button
+                    class="border border-gray-200 hover:bg-slate-50 dark:bg-[#1F2937] dark:hover:bg-[#435774] px-10 text-lg font-semibold py-2 md:py-3 rounded-lg">Load
+                    More Post</button>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="w-full bg-[#111827] dark:bg-[#1F2937] text-white px-6 py-12">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-10 gap-10">
+
+                <!-- BRAND -->
+                <div class="sm:col-span-3 lg:col-span-3">
+                    <h1 class="font-bold text-2xl flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-plane-departure text-[#14A496]"></i>
+                        Wanderly
+                    </h1>
+
+                    <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+                        Discover extraordinary destinations and create unforgettable memories with our curated travel
+                        experiences.
+                    </p>
+
+                    <div class="flex gap-4 text-lg">
+                        <i class="fa-brands fa-instagram hover:text-[#CA8A04] cursor-pointer transition"></i>
+                        <i class="fa-brands fa-facebook hover:text-[#CA8A04] cursor-pointer transition"></i>
+                        <i class="fa-solid fa-x hover:text-[#CA8A04] cursor-pointer transition"></i>
+                        <i class="fa-brands fa-youtube hover:text-[#CA8A04] cursor-pointer transition"></i>
+                    </div>
+                </div>
+
+                <!-- DESTINATIONS -->
+                <div>
+                    <h2 class="font-semibold mb-4">Destinations</h2>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Maldives</a></li>
+                        <li><a href="#" class="hover:text-white transition">Bali</a></li>
+                        <li><a href="#" class="hover:text-white transition">Paris</a></li>
+                        <li><a href="#" class="hover:text-white transition">Switzerland</a></li>
+                    </ul>
+                </div>
+
+                <!-- COMPANY -->
+                <div>
+                    <h2 class="font-semibold mb-4">Company</h2>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Our Team</a></li>
+                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- SUPPORT -->
+                <div>
+                    <h2 class="font-semibold mb-4">Support</h2>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition">Travel Insurance</a></li>
+                        <li><a href="#" class="hover:text-white transition">Cancellation Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- NEWSLETTER -->
+                <div class="sm:col-span-2 md:col-span-3 lg:col-span-4">
+                    <h2 class="font-semibold mb-4">Travel Inspiration</h2>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Subscribe for exclusive deals, travel tips, and destination guides.
+                    </p>
+
+                    <form class="flex flex-col sm:flex-row gap-3">
+                        <input type="email" placeholder="Enter your email"
+                            class="w-full px-4 py-2 rounded-md bg-[#111827] dark:bg-[#1F2937] border border-gray-700 focus:outline-none focus:border-[#14A496]" />
+
+                        <button
+                            class="bg-[#14A496] px-4 py-2 rounded-md font-semibold hover:bg-[#05e1cb] transition whitespace-nowrap">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- DIVIDER -->
+            <hr class="my-8 border-gray-700">
+
+            <!-- BOTTOM -->
+            <div
+                class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400 text-center md:text-left">
+                <p>© 2026 Wanderly. All rights reserved.</p>
+
+                <ul class="flex flex-wrap justify-center md:justify-end gap-6">
+                    <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white transition">Terms & Services</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="script/mobile.js"></script>
+    <script src="script/theme.js"></script>
+    <script src="script/activeLink.js"></script>
+</body>
+
+</html>
